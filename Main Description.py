@@ -18,6 +18,9 @@ app.attributes("-fullscreen", True)
 Directions_Frame = customtkinter.CTkFrame(app,corner_radius=25)
 Directions_Frame.grid(row= 0, column= 0, pady=15, padx=20, ipady=4)
 
+#Adding UI elements, Text Frame
+title = ttk.Label(Directions_Frame, text="Directions:", font=("", 24))
+title.grid(row=3, column=4)
 
 # Run app
 app.mainloop()
