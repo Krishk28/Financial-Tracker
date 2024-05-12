@@ -32,6 +32,8 @@ def insert_numbered_list():
         label.grid(row=idx+5, column=4, padx=10, pady=5)
         label.configure(wraplength=400)  # Set wrap length to 400 pixels so words dont run on
 
+insert_numbered_list()
+
 
 
 #Adding UI elements, Text Frame
