@@ -6,6 +6,7 @@ from tkinter import messagebox
 from tkinter.filedialog import askopenfilename
 import pandas as pd
 
+
 #Our app Frame
 app = customtkinter.CTk()
 app.title("Financial Tracker")
@@ -40,10 +41,18 @@ def insert_numbered_list():
 
 insert_numbered_list()
 
+def import_csv_data():
+    global v
+    csv_file_path = askopenfilename()
+    print(csv_file_path)
+    v.set(csv_file_path)
+    #df = pd.read_csv(csv_file_path)
+
+
 #Import CSV Button
 ttk.Button(Directions_Frame, text='Upload CSV',command=import_csv_data).grid(row=13, column=4,)
 
-# 
+#Import Enter Pay button
 ttk.Button(Directions_Frame, text='Enter Pay').grid(row=12, column=4,)
 
 
