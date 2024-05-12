@@ -20,9 +20,15 @@ app.attributes('-fullscreen', True)
 Directions_Frame = customtkinter.CTkFrame(app,corner_radius=25)
 Directions_Frame.grid(row= 0, column= 0, pady=15, padx=20, ipady=4)
 
+# Configure rows and columns to expand and fill the available space
+app.rowconfigure(0, weight=1)
+app.columnconfigure(0, weight=1)
+Directions_Frame.rowconfigure(0, weight=1)
+Directions_Frame.columnconfigure(0, weight=1)
+
 
 #Adding UI elements, Text Frame
-title = ttk.Label(Directions_Frame, text="Directions:", font=("", 24))
+title = ttk.Label(Directions_Frame, text="Directions:", font=("", 30))
 title.grid(row=3, column=4)
 
 
@@ -36,9 +42,9 @@ def insert_numbered_list():
     ]
     
     for idx, item in enumerate(items, start=1):
-        label = customtkinter.CTkLabel(Directions_Frame, text=f"{idx}. {item}")
+        label = customtkinter.CTkLabel(Directions_Frame, text=f"{idx}. {item}", font=("",19))
         label.grid(row=idx+5, column=4, padx=10, pady=5)
-        label.configure(wraplength=400)  # Set wrap length to 400 pixels so words dont run on
+        label.configure(wraplength=600)  # Set wrap length to 400 pixels so words dont run on
 
 insert_numbered_list()
 
@@ -51,7 +57,7 @@ def import_csv_data():
 
 
 #Import CSV Button
-ttk.Button(Directions_Frame, text='Upload CSV',command=import_csv_data).grid(row=13, column=4,)
+ttk.Button(Directions_Frame, text='Upload CSV',command=import_csv_data).grid(row=13, column=4,ipady=4)
 
 #Import Enter Pay button
 ttk.Button(Directions_Frame, text='Enter Pay').grid(row=12, column=4,)
