@@ -12,3 +12,12 @@ app.title("Financial Tracker")
 app.configure(bg='green')
 app.minsize(1920, 1080)  # Set a minimum size larger than the enforced minimum
 app.attributes("-fullscreen", True)
+
+
+#creating a frame for my widgets
+Directions_Frame = customtkinter.CTkFrame(app,corner_radius=25)
+Directions_Frame.grid(row= 0, column= 0, pady=15, padx=20, ipady=4)
+
+
+# Run app
+app.mainloop()
