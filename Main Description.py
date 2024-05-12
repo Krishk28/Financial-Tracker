@@ -11,8 +11,7 @@ import pandas as pd
 app = customtkinter.CTk()
 app.title("Financial Tracker")
 app.configure(bg='green')
-app.minsize(1920, 1080)  # Set a minimum size larger than the enforced minimum
-app.attributes("-fullscreen", True)
+app.state('zoomed')
 
 
 #creating a frame for my widgets
