@@ -18,6 +18,12 @@ app.attributes("-fullscreen", True)
 Directions_Frame = customtkinter.CTkFrame(app,corner_radius=25)
 Directions_Frame.grid(row= 0, column= 0, pady=15, padx=20, ipady=4)
 
+
+#Adding UI elements, Text Frame
+title = ttk.Label(Directions_Frame, text="Directions:", font=("", 24))
+title.grid(row=3, column=4)
+
+
 def insert_numbered_list():
     items = [
         "Export Financial Data: Go to your banking app or website and export your financial data as a CSV file. This file should contain details of your income and expenses.\n",
@@ -34,11 +40,13 @@ def insert_numbered_list():
 
 insert_numbered_list()
 
+#Import CSV Button
+ttk.Button(Directions_Frame, text='Upload CSV',command=import_csv_data).grid(row=13, column=4,)
+
+# 
+ttk.Button(Directions_Frame, text='Enter Pay').grid(row=12, column=4,)
 
 
-#Adding UI elements, Text Frame
-title = ttk.Label(Directions_Frame, text="Directions:", font=("", 24))
-title.grid(row=3, column=4)
 
 # Run app
 app.mainloop()
