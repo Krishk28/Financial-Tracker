@@ -8,16 +8,15 @@ import pandas as pd
 
 
 #Our app Frame
-app = customtkinter.CTk()
+app = customtkinter.CTk(fg_color="#0b1024")
 app.title("Financial Tracker")
-app.configure(bg='green')
 app.minsize(app.winfo_screenwidth(), app.winfo_screenheight())
 app.state('zoomed')
 app.attributes('-fullscreen', True)
 
 
 #creating a frame for my widgets
-Directions_Frame = customtkinter.CTkFrame(app,corner_radius=25)
+Directions_Frame = customtkinter.CTkFrame(app,corner_radius=25, fg_color="#181a2f")
 Directions_Frame.grid(row= 0, column= 0, pady=15, padx=20, ipady=4)
 
 # Configure rows and columns to expand and fill the available space
@@ -42,8 +41,8 @@ def insert_numbered_list():
     ]
     
     for idx, item in enumerate(items, start=1):
-        label = customtkinter.CTkLabel(Directions_Frame, text=f"{idx}. {item}", font=("",19))
-        label.grid(row=idx+5, column=4, padx=10, pady=5)
+        label = customtkinter.CTkLabel(Directions_Frame, text=f"{idx}.   {item}", font=("Canva Sans",19))
+        label.grid(row=idx+5, column=4, padx=20, pady=5)
         label.configure(wraplength=600)  # Set wrap length to 400 pixels so words dont run on
 
 insert_numbered_list()
@@ -57,10 +56,10 @@ def import_csv_data():
 
 
 #Import CSV Button
-ttk.Button(Directions_Frame, text='Upload CSV',command=import_csv_data).grid(row=13, column=4,ipady=4)
+ttk.Button(Directions_Frame, text='Upload CSV',command=import_csv_data,style='Custom.TButton').grid(row=13, column=4,ipady=4)
 
 #Import Enter Pay button
-ttk.Button(Directions_Frame, text='Enter Pay').grid(row=12, column=4,)
+ttk.Button(Directions_Frame, text='Enter Pay',style='Custom.TButton').grid(row=12, column=4)
 
 
 
