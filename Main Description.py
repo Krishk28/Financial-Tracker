@@ -24,7 +24,7 @@ Directions_Frame.rowconfigure(0, weight=1)
 Directions_Frame.columnconfigure(0, weight=1)
 
 # Adding UI elements, Text Frame
-title = ttk.Label(Directions_Frame, text="Directions:", font=("Inconsolata", 30))
+title = customtkinter.CTkLabel(Directions_Frame, text="Directions:", font=("Inconsolata", 30))
 title.grid(row=3, column=4)
 
 
@@ -52,10 +52,10 @@ def import_csv_data():
     #df = pd.read_csv(csv_file_path)
 
 # Import CSV Button
-ttk.Button(Directions_Frame, text='Upload CSV', command=import_csv_data, style='Custom.TButton').grid(row=13, column=4, ipady=4)
+customtkinter.CTkButton(Directions_Frame, text='Upload CSV', command=import_csv_data).grid(row=13, column=4, ipady=4)
 
 # Import Enter Pay button
-ttk.Button(Directions_Frame, text='Enter Pay', style='Custom.TButton').grid(row=12, column=4)
+customtkinter.CTkButton(Directions_Frame, text='Enter Pay').grid(row=12, column=4)
 
 # Run app
 app.mainloop()
