@@ -25,7 +25,7 @@ Directions_Frame.rowconfigure(0, weight=1)
 Directions_Frame.columnconfigure(0, weight=1)
 
 # Adding UI elements, Text Frame
-title = customtkinter.CTkLabel(Directions_Frame, text="Directions:", font=("Inconsolata", 30))
+title = customtkinter.CTkLabel(Directions_Frame, text="Directions:", font=("", 30))
 title.grid(row=3, column=4)
 
 
@@ -39,7 +39,7 @@ def insert_numbered_list():
     ]
     
     for idx, item in enumerate(items, start=1):
-        label = customtkinter.CTkLabel(Directions_Frame, text=f"{idx}.   {item}", font=("Inconsolata", 19))
+        label = customtkinter.CTkLabel(Directions_Frame, text=f"{idx}.   {item}", font=("", 19))
         label.grid(row=idx+5, column=4, padx=20, pady=5)
         label.configure(wraplength=600)  # Set wrap length to 400 pixels so words don't run on
 
