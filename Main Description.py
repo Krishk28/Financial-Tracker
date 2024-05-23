@@ -1,3 +1,4 @@
+from tkinter import *           
 import tkinter as tk
 from tkinter import ttk
 from tkinter import messagebox
@@ -51,11 +52,21 @@ def import_csv_data():
     v.set(csv_file_path)
     #df = pd.read_csv(csv_file_path)
 
+
+def openNewWindow():
+    Enterpaywindow = Toplevel(app)
+    Enterpaywindow.title("Enter Pay")
+    Enterpaywindow.geometry("400x200")
+    Enterpaywindow.lift()
+    Enterpaywindow.attributes("-topmost", True)
+    Enterpaywindow.attributes("-topmost", False) 
+
+
 # Import CSV Button
 customtkinter.CTkButton(Directions_Frame, text='Upload CSV', command=import_csv_data).grid(row=13, column=4, ipady=4)
 
 # Import Enter Pay button
-customtkinter.CTkButton(Directions_Frame, text='Enter Pay').grid(row=12, column=4)
+customtkinter.CTkButton(Directions_Frame, text='Enter Pay', corner_radius=30, command=openNewWindow).grid(row=12, column=4)
 
 # Run app
 app.mainloop()
