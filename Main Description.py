@@ -25,9 +25,9 @@ Directions_Frame.rowconfigure(0, weight=1)
 Directions_Frame.columnconfigure(0, weight=1)
 
 # Adding UI elements, Text Frame
-title = customtkinter.CTkLabel(Directions_Frame, text="Directions:", font=("", 30))
+title = customtkinter.CTkLabel(Directions_Frame, text="Directions:", font=("", 30,))
 title.grid(row=3, column=4)
-header = customtkinter.CTkLabel(app, text="BudgetBuddy", font=("", 50), text_color="white")
+header = customtkinter.CTkLabel(app, text="BudgetBuddy", font=("", 50, 'bold'), text_color="white")
 header.grid(row=0, column=0, sticky="nw", padx = 20, pady=20)
 
 
