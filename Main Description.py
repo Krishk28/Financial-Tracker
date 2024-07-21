@@ -56,12 +56,16 @@ def import_csv_data():
 
 
 def openNewWindow():
-    Enterpaywindow = Toplevel(app)
+    Enterpaywindow = customtkinter.CTk(fg_color="#0b1024")
     Enterpaywindow.title("Enter Pay")
     Enterpaywindow.geometry("400x200")
     Enterpaywindow.lift()
     Enterpaywindow.attributes("-topmost", True)
-    Enterpaywindow.attributes("-topmost", False) 
+    Enterpaywindow.attributes("-topmost", False)
+
+
+
+
 
 
 # Import CSV Button
@@ -77,6 +81,7 @@ customtkinter.CTkButton(Directions_Frame, text='Enter Pay', command=openNewWindo
     border_width=1,
     border_color="black",
     fg_color="transparent").grid(row=12, column=4, ipady=2)
+
 
 # Run app
 app.mainloop()
