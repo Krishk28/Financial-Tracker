@@ -63,8 +63,14 @@ def openNewWindow():
     Enterpaywindow.attributes("-topmost", True)
     Enterpaywindow.attributes("-topmost", False)
 
+    EnterPay_Frame = customtkinter.CTkFrame(Enterpaywindow, corner_radius=25, fg_color="#181a2f")
+    EnterPay_Frame.grid(row=0, column=0, pady=15, padx=20, ipady=4)
 
+    title_enterpay = customtkinter.CTkLabel(EnterPay_Frame, text="Current Balance:", font=("", 30,))
+    title_enterpay.grid(row=0, column=0, pady=10, padx=10)
 
+    customtkinter.CTkEntry(EnterPay_Frame)
+    
 
 
 
@@ -82,6 +88,6 @@ customtkinter.CTkButton(Directions_Frame, text='Enter Pay', command=openNewWindo
     border_color="black",
     fg_color="transparent").grid(row=12, column=4, ipady=2)
 
-
+ 
 # Run app
 app.mainloop()
